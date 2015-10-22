@@ -14,6 +14,7 @@ module.exports = function(grunt) {
                 files: 'avalon.shim.min.js'
             },
             webuploader: {
+                // name used to map webuploader to fex-webuploader
                 name: 'fex-webuploader',
                 dist: 'dist',
                 files: ['webuploader.min.js', 'Uploader.swf', 'webuploader.css']
