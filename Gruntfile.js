@@ -18,6 +18,11 @@ module.exports = function(grunt) {
                 name: 'fex-webuploader',
                 dist: 'dist',
                 files: ['webuploader.min.js', 'Uploader.swf', 'webuploader.css']
+            },
+            dialog: {
+                name: 'art-dialog',
+                dist: 'dist',
+                files: ['dialog-min.js', '../css/ui-dialog.css']
             }
         };
         var bowerfy = function(name, dist, files) {
@@ -26,7 +31,8 @@ module.exports = function(grunt) {
                 cwd: 'bower_components/'+name+'/'+dist,
                 filter: 'isFile',
                 src: files,
-                dest: 'src/static/packages/'+name
+                dest: 'src/static/packages/'+name,
+                flatten: true
             }
         };
         var module = {};
